@@ -1,0 +1,51 @@
+更改路径
+
+d:        　　　　　　// 切换到d盘
+
+cd  <folder> 　　  // 进入folder文件夹
+
+cd..   　　　　　　 // 返回到上一级目录
+
+copy nul 创建文件，md 创建件文件夹
+
+copy nul <file> 　　// 创建文件
+
+md <folder>   　　 // 创建文件夹
+
+del删除文件，rd 删除文件夹，rm 删除文件和文件夹
+
+del a.txt   　　 // 删除a.txt文件
+
+del *.txt    　　  // 删除所有.txt后缀的文件
+
+del  *.*   　　 　// 删除所有文件
+
+rd wed    　　   // 删除空的web文件夹
+
+rd wed/s 　　   // 删除web文件夹，会询问是否删除（y/n）,输出y回车即删除
+
+rm -r <floder>　　// 删除文件夹及其里面的所有文件,慎用
+
+ren重命名文件、文件夹
+
+ren <floder> <folder>    　　// 将folder文件夹重命名为folder2文件夹
+
+move移动文件、文件夹
+
+d:\>move folder\a.txt folder2\ 　　　　// 将d盘下的folder文件夹里的a.txt文件移动到d盘的folder2文件夹中
+
+copy复制文件，xcopy复制文件夹
+
+d:\>copy a.txt folder2\ 　　　　　　//将d盘下的a.txt文件复制到d盘的folder2文件夹中
+
+d:\>xcopy folder folder2\  /e　　 // 将d盘下的folder文件夹复制到d盘的folder2文件夹中
+
+其他
+
+cls          // 清屏
+
+dir 　　　　// 查看当前目录中的文件、文件夹
+
+dir/ah 　　// 查看当前目录中的隐藏文件、文件夹
+
+上下键      // 可以翻看使用过的命令

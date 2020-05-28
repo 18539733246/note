@@ -1,0 +1,11 @@
+默认导入 import <name> from "dirname"
+
+默认导出 export default <要导出对象>
+
+按需导入 import { name .....} from "dirname"  《name 的名字要与export导出的名字相同 ，使用as 关键字 重命名默认导出的对象 
+使用方法 ：原名在前 新名字在后 例如：export导出的对象名字是d1  import { d1 as d2 } from ""》
+
+按需导出  export 要导出的对象
+                                                                       注意：默认导出 在同一个文件中只能用一次 ，按需导出可以多次使用
+
+import “dirname”  运行这个文件 

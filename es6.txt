@@ -1,0 +1,56 @@
+set
+
+let s = new Set();
+set 的方法
+.clear()   //清除所有的值
+.delete("") //删除某一项 返回布尔值，代表删除成功与否
+.add("")//添加某一项 返回Set本身，可以连续调用
+.has("") //查看是否包含某一项 返回布尔值
+
+map
+里面是key和val的形式
+arr = [["a",1],["s",2]];
+与set的方法一样，
+.get(key) //key 值 获取到对应的val 
+.set(key,val) // 设置一个值 例如.set("a",1)   返回Map对象 可以连续调用
+
+...arr //可以转换成数组
+
+
+ array
+//返回数组元素
+Array.find((item,index)=>{
+       code....
+})
+//返回数组索引
+Array.findIndex((item)=>{
+  code.....
+})
+//把多维数组转成一维数组
+Array.flat(infinity)//infinite 无线
+
+//查找数组中有没有包含val     返回布尔值
+Array.includes(val,index) //val 要查找的值 index 从哪里开始查找
+
+遍历键值
+for(let value of ['a', 'b'].values()){
+    console.log(value);
+}
+// "a"
+// "b"
+还有，键名key(),键值对entries()
+
+字符串
+
+includes()：返回布尔值，判断是否找到参数字符串。
+startsWith()：返回布尔值，判断参数字符串是否在原字符串的头部。
+endsWith()：返回布尔值，判断参数字符串是否在原字符串的尾部
+
+              以上三个方法都可以接受两个参数，需要搜索的字符串，和可选的搜索起始位置索引
+对象
+
+//可用于合并两个对象
+let person = {...age, ...name};
+
+
+

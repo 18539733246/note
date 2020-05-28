@@ -1,0 +1,40 @@
+安装 cnpm i -g express-generator
+cnpm i 装依赖
+创建项目 express - e <porject name>
+开启项目 npm start  或 node app
+静态文件放到public文件夹
+
+express 分大路由 和小路由 
+router文件夹下的每一个文件就是一个大路由  每一个文件要使用，需要在app.js里引用
+ require引入 app.use 使用 
+
+
+响应对象res
+
+res.status(200).send("");  
+
+res.json();// 返回json文件并，自动设置响应头（text/json）
+
+res.download("./1.json","2.json") //参数1必须填 有参数2的时候是下载1.json文件，并命名为2.json
+
+res.redirect("") //重定向跳转 跳转到指定url
+
+res.cookie(); //baidu
+
+res.clearCookie() //clearcookie
+
+请求对象req
+
+req.get('content-type') //设置请求头
+
+get方式传递参数
+req.query.参数名
+req.params.参数    获取路由/后面的url 例如 router.get('./login?:id') 获取？后面的url
+
+post方式传递参数
+req.body.参数名
+
+req.ip //获取IP地址
+//express设置跨域响应头
+res.header("Access-Control-Allow-Origin", "*");
+

@@ -1,0 +1,62 @@
+安装
+npm i less -g
+
+变量定义
+@变量名：值 例如：@color：#f00；
+使用时填变量名
+
+字符串拼接
+把所有用分号包裹，变量部分用’{}‘包裹
+例如： 变量：@url：‘./image/'; 
+body{
+background:url('@{url}1.png'); //编译后  background:url('./image/1.png');
+}
+
+混入（与函数差不多）
+.success(@color:#f00,@size:20px){ 
+	color:color;
+	font-size:size
+}
+.title{
+    .success(); //这里与函数用法相同，实参可以不传（使用默认变量）。
+}
+
+匹配模式（类似switch，媒体查询）
+.fn(@_,@color,@size){
+	background:@color;
+	font-size:@size;
+}
+.fn(1,@color,@size){
+	
+}
+.fn(2,@color,@size){
+	
+}
+.fn(3,@color,@size){
+	
+}
+.fn(4,@color,@size){
+	
+}
+
+调用：
+.fn(1,#foo,15px){
+	//编译后是 .fn第一个参数与其相等的样式
+}
+嵌套
+父元素{
+	子元素{
+		孙子元素{}
+	}
+}
+
+注：&表示上一级元素
+
+运算符
++    -     *    /
+作用 ：角度，颜色 ，宽度，高度
+
+
+
+
+

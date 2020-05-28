@@ -1,0 +1,18 @@
+npm install webpack webpack-cli -D
+
+自定义打包入口和出口
+const path = require('path');
+module.exports = {
+mode:'devepolment',
+entry:path.join(__dirname,''),
+output:{
+path:path.join(__dirname,''),
+filename:'文件名'
+}
+}
+
+自动打包
+npm install webpack-dev-server -D
+修改package.js下的脚本，dev:"webpack-dev-server"
+重新运行npm run dev
+

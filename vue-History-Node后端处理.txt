@@ -1,0 +1,4 @@
+npm i connect-history-api-fallback --save
+
+在app.js中间件中使用
+app.use(history());

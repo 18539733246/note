@@ -1,0 +1,47 @@
+安装
+windows下载安装包安装就好
+
+Linux 安装
+1，wget http://nodejs.org/dist/latest/node-v10.11.0-linux-x64.tar.gz //貌似这个下载不聊了，可以官网下载，上传主机下载
+2，tar  xf 文件名 -C /usr/local/
+3，cd /usr/local/
+4，mv node文件名/ nodejs
+5，ln -s /usr/local/nodejs/bin/node /usr/local/bin
+6，ln -s /usr/local/nodejs/bin/npm /usr/local/bin
+
+
+node 中的流
+
+需在fs模块的作用下
+let stream = fs.createWriteStream('./1.txt')// 创建可写流
+stream.write('content',UTF8)//写入内容
+stream.end()// 结束流
+
+写入流有finish结束事件 stream.on('finish',()=>{}); 
+error错误事件stream.on('error',()=>{});
+
+let stream = fs.createReadStream('./1.txt')//创建可读流
+
+读取流有data事件（读到数据触发该函数）
+stream.on('data',(a)=>{console.log(a.toString())});//读取文件
+end 结束事件 stream.on('end',()=>{}); 
+error 错误事件stream.on('error',()=>{});
+
+
+管道(pipe)与流同时使用
+假设没有2.txt；
+let stream1 = fs.createReadStream('./1.txt');
+let stream2 = fs.createWriteStream('./2.txt');
+stream1.pipe(stream2);
+运行就有了2.txt
+
+
+链式流（和jquery的链式调用一样）
+var fs = require("fs");
+var zlib = require('zlib');
+fs.createReadStream('input.txt')
+  .pipe(zlib.createGzip())
+  .pipe(fs.createWriteStream('input.txt.zip'));
+console.log("文件压缩完成。");
+
+

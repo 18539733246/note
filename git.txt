@@ -1,0 +1,16 @@
+安装
+https://npm.taobao.org/mirrors/git-for-windows/
+
+打开git-bash.exe
+git add <file>    // "."可以提交所有文件
+git commit -m "decrip"
+git branch "分支名" //创建分支
+git checkout "分支名" //跳转到分支
+git merge "分支名"   //合并分支到主干（master）
+
+git修改远程仓库地址 
+git remote rm origin
+第一次push时
+git push -u origin master
+之后在提交只需 
+git push 即可

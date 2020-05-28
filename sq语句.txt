@@ -1,0 +1,40 @@
+create database my_database  创建一个数据库
+drop database my_database   删除一个数据库
+create table my_database(
+	id int not null auto_increment,
+	email varchar(255),
+	name varchar(255),
+	primary key(id)
+)     创建数据表及结构
+
+删除数据表
+DROP TABLE `my_database`; 
+DROP TABLE IF EXISTS stu; if exists //判断是否存在该表，如果没有不会报错
+
+insert into my_database （email ，name）values（‘2973912389@qq.com’,'谢先生'）
+  插入数据  values 插入多条数据，用（），分割，例如（‘2973912389@qq.com’,'谢先生'）（‘2973912389@qq.com’,'李先生')
+updata my_database set email = '2973912389@qq,com' where id = 3
+更新数据  where 意思是 条件
+delete from my_database where id = 3
+删除数据
+select * from my_database where id = 3
+
+SELECT * FROM `my_database` WHERE `name` LIKE '谢先生'
+
+查询数据   条件可以写 order by email
+
+修改表名
+alter table my_database  rename my_database1
+另外一种修改表名方式
+rename  table my_database  to my_database 1
+
+
+
+php语法
+mysql_fetch_array($resoult) // 从数据库拿到的数据转换成数组
+json_encode($resoult); //转换成json
+$mysql  = new mysqli("localhost","root","xzy000616","")//连接数据库
+if(!$mysql ){die(mysql->error())}  //判断是否连接成功
+mysqli->query("sql语句")  //创建数据库
+mysql->select_db("数据表")  //选择数据表
+mysql->close($mysql)  //关闭连接
