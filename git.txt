@@ -8,7 +8,7 @@ git branch "分支名" //创建分支
 git checkout "分支名" //跳转到分支
 git merge "分支名"   //合并分支到主干（master）
 
-git修改远程仓库地址 
+git修改远程仓库地址  // http://github.com/18539733246/note.git
 git remote rm origin
 第一次push时
 git push -u origin master
