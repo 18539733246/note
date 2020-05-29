@@ -14,3 +14,10 @@ git remote rm origin
 git push -u origin master
 之后在提交只需 
 git push 即可
+
+git版本回退
+git log //查看历史记录
+git log --pretty=online //简约的展示记录
+
+git reset --hard head^ //"^"向上回退一次
+git reset --hard head "版本号" //版本号可以不用填写完全。
